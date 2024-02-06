@@ -3,9 +3,17 @@ import  Footer  from "./Footer";
 
 export default function Dashboard() {
     return (
-      <main className="text-center w-full border-black border-2 rounded-md">
+      <main className="text-center w-full  bg-gray-200">
           <Header />
-          Home
+          <div>
+            home
+          </div>
+          <div>
+            home
+          </div>
+          <div>
+            home
+          </div>
           <Footer/>
       </main>
     );
