@@ -18,12 +18,16 @@ const config: Config = {
          // => @media (min-width: 0px) { ... }
          'adl': '375px',
          // => @media (min-width: 375px) { ... }
-       'ddl': '670px',
-         // => @media (min-width: 670px) { ... }
+       'ddl': '570px',
+         // => @media (min-width: 570px) { ... }
+         'dlll': '769px',
+         // => @media (min-width: 769px) { ... }
+         'dll': '1200px',
+      // => @media (min-width: 1200px) { ... }
       'dl': '1440px',
-      // => @media (min-width: 1280px) { ... }
+      // => @media (min-width: 1400px) { ... }
       '2dl': '2560px',
-      // => @media (min-width: 1280px) { ... }
+      // => @media (min-width: 2560px) { ... }
    },
     },
   },
