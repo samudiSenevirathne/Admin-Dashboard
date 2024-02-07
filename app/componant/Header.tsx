@@ -12,12 +12,14 @@ import SearchBar from "./SearchBar";
 import PopUp from "./PopUp";
 import Meassage from "./Meassage";
 import Alert from "./Alert";
+import SearchBarTemp from "./SearchBarTemp";
 
 export default function Header() {
 
   const [isPopUpVisible, setPopUpVisible] = useState(false);
   const [isMeassageVisible, setMeassageVisible] = useState(false);
   const [isAlertVisible, setAlertVisible] = useState(false);
+  const [isSearchBarTempVisible, setSearchBarTempVisible] = useState(false);
 
     const togglePopUp = () => {
         setPopUpVisible(!isPopUpVisible);
@@ -29,6 +31,10 @@ export default function Header() {
 
     const toggleAlert = () => {
       setAlertVisible(!isAlertVisible);
+    };
+
+    const toggleSearchBarTemp = () => {
+      setSearchBarTempVisible(!isSearchBarTempVisible);
     };
 
     return (
@@ -47,7 +53,8 @@ export default function Header() {
 
           <div className="w-2/5 flex flex-row justify-evenly">
 
-          <FaSearch className="my-auto mx-auto text-gray-300 cursor-pointer hover:text-gray-400  dddl:block ddl:hidden"/>
+          <FaSearch onClick={toggleSearchBarTemp} className={`my-auto mx-auto text-gray-300 cursor-pointer
+           hover:text-gray-400 dddl:block ddl:hidden ${isSearchBarTempVisible ? "text-gray-500" : ""}`} />
 
           <div className="flex flex-row cursor-pointer mx-auto">
           <FaBell  onClick={toggleAlert} className={`my-auto text-gray-300 hover:text-gray-400 
@@ -75,6 +82,7 @@ export default function Header() {
            {isPopUpVisible && <PopUp />}
            {isMeassageVisible && <Meassage />}
            {isAlertVisible && <Alert />}
+           {isSearchBarTempVisible &&<SearchBarTemp/>}
 
           </div>
 

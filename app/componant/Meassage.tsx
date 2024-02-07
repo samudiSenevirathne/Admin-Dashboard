@@ -3,8 +3,9 @@ import User from "../image/Thinking face-bro.png";
 
 export default function Meassage() {
     return (
-        <div className=" absolute flex flex-col right-0 z-10 mt-[82px] mr-[277px] w-80 origin-top-right 
-        rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <div className=" absolute flex flex-col right-0 z-10 mt-[82px] md:mr-[277px] w-80 origin-top-right 
+        rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dddl:m-auto 
+        dddl:top-[82px] dddl:left-0 dddl:right-0">
            
          <div  className="px-4 py-3 bg-indigo-600 text-white cursor-default rounded-t-md text-start text-[10px]">
            MEASSAGE CENTER
