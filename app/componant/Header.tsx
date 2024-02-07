@@ -10,15 +10,20 @@ import User from "../image/Thinking face-bro.png";
 import { FaBars } from "react-icons/fa";
 import SearchBar from "./SearchBar";
 import PopUp from "./PopUp";
-
+import Meassage from "./Meassage";
 
 export default function Header() {
 
   const [isPopUpVisible, setPopUpVisible] = useState(false);
+  const [isMeassageVisible, setMeassageVisible] = useState(false);
 
     const togglePopUp = () => {
         setPopUpVisible(!isPopUpVisible);
     };
+
+    const toggleMeassage = () => {
+      setMeassageVisible(!isMeassageVisible);
+  };
 
     return (
         <nav className="flex flex-row justify-between bg-white shadow-gray shadow-md">
@@ -44,21 +49,24 @@ export default function Header() {
           </div>
          
           <div className="flex flex-row cursor-pointer">
-          <FaEnvelope className="my-auto text-gray-300 hover:text-gray-400 " />
+          <FaEnvelope onClick={toggleMeassage}  className={`my-auto text-gray-300 hover:text-gray-400 
+          ${isMeassageVisible ? "text-gray-500" : ""}`} />
+         
           <div className="bg-red-500 h-3 w-3 text-center text-white text-[8px] rounded-sm mt-7 ml-2 absolute ">7</div>
           </div>
 
            <div  className="bg-gray-300 h-8 w-[1px] my-auto "></div>
 
            <div className=" flex flex-row " >
-           <h1 className="my-auto text-gray-500 mr-3 cursor-pointer">Dougles McGee</h1>
+           <h1 className="my-auto text-gray-500 mr-3 cursor-pointer" onClick={togglePopUp}>Dougles McGee</h1>
            <div className="h-8 w-8 rounded-full bg-gray-300 my-auto cursor-pointer" onClick={togglePopUp}>
                         <Image src={User} alt="User Profile" />
-                    </div>
+            </div>
            
            </div>
            
            {isPopUpVisible && <PopUp />}
+           {isMeassageVisible && <Meassage />}
 
           </div>
 
