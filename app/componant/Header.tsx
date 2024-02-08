@@ -71,7 +71,7 @@ export default function Header() {
 
            <div  className="bg-gray-300 h-8 w-[1px] my-auto mx-auto"></div>
 
-           <div className=" flex flex-row ">
+           <div className=" flex flex-row mr-2">
            <h1 className="my-auto text-gray-500 mr-3 cursor-pointer dddl:hidden dlll:block" onClick={togglePopUp}>Dougles McGee</h1>
            <div className="h-8 w-8 rounded-full bg-gray-300 my-auto cursor-pointer" onClick={togglePopUp}>
                         <Image src={User} alt="User Profile" />
