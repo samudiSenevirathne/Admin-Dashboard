@@ -13,6 +13,7 @@ import PopUp from "./PopUp";
 import Meassage from "./Meassage";
 import Alert from "./Alert";
 import SearchBarTemp from "./SearchBarTemp";
+import SideBarTemp from "./SideBarTemp";
 
 export default function Header() {
 
@@ -20,6 +21,7 @@ export default function Header() {
   const [isMeassageVisible, setMeassageVisible] = useState(false);
   const [isAlertVisible, setAlertVisible] = useState(false);
   const [isSearchBarTempVisible, setSearchBarTempVisible] = useState(false);
+  const [isSideBarTempVisible, setSideBarTempVisible] = useState(false);
 
     const togglePopUp = () => {
         setPopUpVisible(!isPopUpVisible);
@@ -37,15 +39,22 @@ export default function Header() {
       setSearchBarTempVisible(!isSearchBarTempVisible);
     };
 
+    const toggleSideBarTemp = () => {
+      setSideBarTempVisible(!isSideBarTempVisible);
+    };
+
+
+
     return (
         <nav className="flex flex-row  dlll:justify-evenly lg:justify-evenly dll:justify-between bg-white shadow-gray shadow-md dddl:h-20 ">
 
         <div className="w-2/5 flex flex-row">
 
-             <div className=" h-8 w-9  ml-6 rounded-full my-auto bg-white hover:bg-gray-200 hover:cursor-pointer dddl:block ddl:hidden"/>
+             <div className=" h-8 w-9 rounded-full my-auto bg-white hover:bg-gray-200 
+             hover:cursor-pointer dddl:block ddl:hidden" />
 
-            <FaBars className=" text-indigo-600 absolute m-8 hover:cursor-pointer dddl:block ddl:hidden" />
-            
+            <FaBars onClick={toggleSideBarTemp} className={` text-indigo-600 absolute mt-8 hover:cursor-pointer
+             dddl:block ddl:hidden ${isSideBarTempVisible ? "ml-28" : "ml-2"}`} />
                 <SearchBar />
              
         </div>
@@ -83,7 +92,7 @@ export default function Header() {
            {isMeassageVisible && <Meassage />}
            {isAlertVisible && <Alert />}
            {isSearchBarTempVisible &&<SearchBarTemp/>}
-
+           {isSideBarTempVisible && <SideBarTemp isSideBarTempVisible={isSideBarTempVisible} />} 
           </div>
 
       </nav>
