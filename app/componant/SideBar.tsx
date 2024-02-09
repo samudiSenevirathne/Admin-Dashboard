@@ -16,7 +16,6 @@ import Rocket from "../image/Outer space-cuate.png";
 
 
 export default function SideBar() {
-  // export default function SideBar({ isSideBarTempVisible }: { isSideBarTempVisible: boolean }) {
 
   const [isBtnClicked, setIsBtnClicked] = useState(false);
   
@@ -25,7 +24,7 @@ export default function SideBar() {
     };
 
     return (
-      <main className="text-center mx-auto bg-indigo-600 dddl:hidden ddl:block">
+      <main className="text-center mx-auto bg-indigo-500 dddl:hidden ddl:block">
 
            <div className={`cursor-pointer ${isBtnClicked ? "flex flex-col" : "flex flex-row "}`} >
            <BsEmojiWinkFill  className={` h-9 w-9 text-white  relative -rotate-45 
@@ -43,7 +42,7 @@ export default function SideBar() {
           <RiDashboard3Fill className={` text-white 
             ${isBtnClicked ? "mx-auto mb-1" : "justify-start"}`}/>
               <div className={` text-sm text-white font-bold
-                ${isBtnClicked ? "mx-auto" : "ml-3"}`}>
+                ${isBtnClicked ? "mx-auto text-xs" : "ml-3"}`}>
               Dashboard</div>
           </div>
 
@@ -58,7 +57,7 @@ export default function SideBar() {
           <IoSettingsSharp className={` text-white 
            ${isBtnClicked ? "mx-auto mb-1" : "justify-start"}`} />
               <div className={` text-sm text-white 
-               ${isBtnClicked ? "mx-auto" : "ml-3"}`}>Componants</div>
+               ${isBtnClicked ? "mx-auto text-xs" : "ml-3"}`}>Componants</div>
               <MdKeyboardArrowRight className={`text-gray-400  my-auto ml-28 
                ${isBtnClicked ? "hidden" : "block"}`}/>
           </div>
@@ -68,7 +67,7 @@ export default function SideBar() {
           <AiFillTool   className={` text-gray-400 hover:text-white
             ${isBtnClicked ? "mx-auto mb-1" : "justify-start"}`}/>
               <div className={`text-sm text-gray-200 hover:text-white
-              ${isBtnClicked ? "mx-auto" : "ml-3"}`}>Utilities</div>
+              ${isBtnClicked ? "mx-auto text-xs" : "ml-3"}`}>Utilities</div>
               <MdKeyboardArrowRight className={`text-gray-400 my-auto ml-36 
                ${isBtnClicked ? "hidden" : "block"}`}/>
           </div>
@@ -83,7 +82,7 @@ export default function SideBar() {
             <FaFolder   className={` text-gray-400 hover:text-white
             ${isBtnClicked ? "mx-auto mb-1" : "justify-start"}`}/>
                 <div className={`text-sm text-gray-200 hover:text-white
-                ${isBtnClicked ? "mx-auto" : "ml-3"}`}>Pages</div>
+                ${isBtnClicked ? "mx-auto text-xs" : "ml-3"}`}>Pages</div>
                 <MdKeyboardArrowRight className={`text-gray-400 my-auto ml-[150px] 
                   ${isBtnClicked ? "hidden" : "block"}`}/>
             </div>
@@ -93,7 +92,7 @@ export default function SideBar() {
             <FaChartArea className={`text-gray-400 hover:text-white
              ${isBtnClicked ? "mx-auto mb-1" : "justify-start"}`}/>
                 <div className={`text-sm text-gray-200 hover:text-white
-                ${isBtnClicked ? "mx-auto" : "ml-3"}`}>Charts</div>
+                ${isBtnClicked ? "mx-auto text-xs" : "ml-3"}`}>Charts</div>
             </div>
 
             <div className={`px-4 py-4 cursor-pointer
@@ -101,7 +100,7 @@ export default function SideBar() {
             <FaTable    className={`text-gray-400 hover:text-white
              ${isBtnClicked ? "mx-auto mb-1" : "justify-start"}`} />
                 <div className={`text-sm text-gray-200 hover:text-white
-                ${isBtnClicked ? "mx-auto" : "ml-3"}`}>Tables</div>
+                ${isBtnClicked ? "mx-auto text-xs" : "ml-3"}`}>Tables</div>
             </div>
 
             <div  className="bg-gray-100 opacity-40 h-[1px] ml-2 mr-2  "></div>

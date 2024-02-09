@@ -46,17 +46,16 @@ export default function Header() {
 
 
     return (
-        <nav className="flex flex-row  dlll:justify-evenly lg:justify-evenly dll:justify-between bg-white shadow-gray shadow-md dddl:h-20 ">
+        <nav className="flex flex-row  dlll:justify-evenly lg:justify-evenly dll:justify-between bg-white shadow-md dddl:h-20 ">
 
         <div className="w-2/5 flex flex-row">
 
              <div className=" h-8 w-9 rounded-full my-auto bg-white hover:bg-gray-200 
              hover:cursor-pointer dddl:block ddl:hidden" />
 
-            <FaBars onClick={toggleSideBarTemp} className={` text-indigo-600 absolute mt-8 hover:cursor-pointer
+            <FaBars onClick={toggleSideBarTemp} className={` text-indigo-500 absolute mt-8 hover:cursor-pointer
              dddl:block ddl:hidden ${isSideBarTempVisible ? "ml-28" : "ml-2"}`} />
                 <SearchBar />
-             
         </div>
 
 

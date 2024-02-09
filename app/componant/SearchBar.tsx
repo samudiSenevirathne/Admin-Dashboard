@@ -10,8 +10,8 @@ export default function SearchBar() {
       type="text"  name="title" placeholder="Search for..."/>
 
       <button className="flex mt-5 mb-5 w-10  mx-auto justify-center rounded-r-lg
-       bg-indigo-600 px-3 focus:ring-4 focus:ring-offset-inherit focus:ring-indigo-300 
-      py-1.5 text-sm font-semibold hover:bg-indigo-700 dddl:hidden ddl:block" type="button" > 
+       bg-indigo-500 px-3 focus:ring-4 focus:ring-offset-inherit focus:ring-indigo-300 
+      py-1.5 text-sm font-semibold hover:bg-indigo-600 dddl:hidden ddl:block" type="button" > 
       <FaSearch className="my-auto text-white" />
       </button>
       

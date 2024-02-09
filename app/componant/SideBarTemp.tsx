@@ -10,7 +10,7 @@ import { FaTable } from "react-icons/fa6";
 export default function SideBarTemp({ isSideBarTempVisible }: { isSideBarTempVisible: boolean }) {
 
     return (
-      <main className={`text-center mx-auto bg-indigo-600 absolute
+      <main className={`text-center mx-auto bg-indigo-500 absolute
       ${isSideBarTempVisible ? "dddl:block ddl:hidden absolute left-0" : "dddl:hidden ddl:block"}`}>
 
            <div className="cursor-pointer flex flex-col" >
