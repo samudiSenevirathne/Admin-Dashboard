@@ -5,6 +5,9 @@ import { FaCalendar } from "react-icons/fa";
 import { FaDollarSign } from "react-icons/fa6";
 import { BiSolidMessageRounded } from "react-icons/bi";
 import { MdNoteAlt } from "react-icons/md";
+import  LineChart  from "./LineChart";
+
+import React, { ReactNode } from 'react';
 
 export default function Dashboard() {
     return (
@@ -62,9 +65,16 @@ export default function Dashboard() {
            </div>
 
           </div>
-
-          <div>
-           
+            
+          <div className="flex flex-row w-full">
+            <div className="bg-white w-3/4 border rounded-xl m-2">
+          <div className="flex flex-col items-center justify-center border rounded-xl h-[400px]">
+              <LineChart />
+         </div>
+         </div>
+          <div className="w-1/4">
+            gg
+          </div>
           </div>
 
           <div>
@@ -79,7 +89,3 @@ export default function Dashboard() {
       </main>
     );
   }
-
-
-
-
